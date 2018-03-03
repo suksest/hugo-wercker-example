@@ -23,11 +23,7 @@ build:
     - arjen/hugo-build:
 	version: "1.29.1"
 	theme: herring-cove
-	flags: --buildDrafs=true
-    - script:
-        name: echo
-        code: |
-          echo "hello world!"
+	flags: --buildDrafts=true
 deploy:
   steps:
     - install-packages:
@@ -36,4 +32,3 @@ deploy:
 	token: $GIT_TOKEN
 	domain: suksest.github.io
 	basedir: public
-	
