@@ -16,19 +16,16 @@ box: debian
 # Read more about pipelines on our dev center
 # http://devcenter.wercker.com/docs/pipelines/index.html
 build:
-    # Steps make up the actions in your pipeline
-    # Read more about steps on our dev center:
-    # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     - arjen/hugo-build:
-	version: "0.36.1"
-	theme: herring-cove
-	flags: --buildDrafts=true
+        version: "0.36.1"
+        theme: herring-cove
+        flags: --buildDrafts=true
 deploy:
   steps:
     - install-packages:
-	packages: git ssh-client
+        packages: git ssh-client
     - lukevivier/gh-pages@0.2.1:
-	token: $GIT_TOKEN
-	domain: suksest.github.io
-	basedir: public
+        token: $GIT_TOKEN
+        domain: suksest.github.io
+        basedir: public
