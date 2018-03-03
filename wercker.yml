@@ -27,5 +27,5 @@ deploy:
         packages: git ssh-client
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
-        domain: suksest.github.io
+        domain: suksest.github.io/hugo-wercker-example
         basedir: public
